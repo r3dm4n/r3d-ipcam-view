@@ -75,6 +75,7 @@ public class Mjpeg {
         if (!TextUtils.isEmpty(username) && !TextUtils.isEmpty(password)) {
             Authenticator.setDefault(new Authenticator() {
                 protected PasswordAuthentication getPasswordAuthentication() {
+                    if username.
                     return new PasswordAuthentication(username, password.toCharArray());
                 }
             });
@@ -113,7 +114,7 @@ public class Mjpeg {
                 }
                 throw new IllegalStateException("invalid type");
             } catch (IOException e) {
-                Log.e(TAG, "error during connection", e);
+                Log.e(TAG, "error during connection 1234 !!!!!", e);
                 return Observable.error(e);
             }
         });
